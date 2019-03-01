@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="form.css">
     
-    <title>Membership Form</title>
+    <title>Beech Island Sno</title>
 </head>
 
 <body>
 
-    <h1>Island Sno Truck Fan Club Membership</h1>
+
+    <h1> Beech Island Sno Truck </h1>
     <p> Please complete form to become an Island Sno Truck Fan! You'll get truck stop schedule updates and notifications
         about new menu items. </p>
      
@@ -19,13 +20,31 @@
         First Name:<br>
         <input type="text" name="firstname"><br>
         Last Name:<br>
-        <input type="text" name="lastname">
+        <input type="text" name="lastname"> <br>
+        E-mail:<br>
+        <input type="text" name="mail"><br><br>
+        <button type="submit" form="name" value="Submit">Submit</button>
     </form>
     <form>
-        <input type="radio" name="gender" value="male" checked> Male<br>
-        <input type="radio" name="gender" value="female" checked> Female<br>
-        <input type="radio" name="gender" value="other" checked> Other
+        <p> Indicate upcoming time  you will need Island Sno:</p>
+        <input type="radio" name="time" value="weeks" checked> upcoming weeks<br>
+        <input type="radio" name="time" value="months" checked> upcoming months<br>
+        <input type="radio" name="time" value="days" checked> upcoming days
     </form>
+    
+    <p>Please indicate the area where you live.</p>
+    <select>
+        <option value="select">Select</option>
+        <option value="north augusta">North Augusta</option>
+        <option value="columbia co.">Columbia Co.</option>
+        <option value="down town">Down Town.</option>
+        <option value="so. augusta">So Augusta</option>
+    </select>
+    <button type="submit" form="area" value="Submit">Submit</button> 
+    
+<h2> Contact Island Sno:</h2>
+    <p>Contact us to add Island Sno treats to your next party! We are available for 
+        all events Big or Small! </p>
 
 </body>
 <script src="form.js"></script>
