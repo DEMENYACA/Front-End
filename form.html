@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="form.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     
     <title>Beech Island Sno</title>
 </head>
 
-<body>
+<body background="islandsno.jpg">
 
-
-    <h1> Island Sno Truck </h1>
+<h1> Island Sno Truck </h1>
  <!-- Island and Sno big font, Truck small font, Div tag?? -->
-    <p> Welcome Island Sno Truck Fans! Let us know who you are! Please leave you contact info below!  </p>
-     
-    <form>
+    <div class="welcome">
+        <p> Welcome Island Sno Truck Fans! Please leave your contact info below!  </p>
+    </div>      
+<form>
         First Name:<br>
         <input type="text" name="firstname"><br>
         Last Name:<br>
@@ -24,15 +25,20 @@
         E-mail:<br>
         <input type="text" name="mail"><br><br>
         <button type="submit" form="name" value="Submit">Submit</button>
-    </form>
-    <form>
-        <p> Indicate upcoming time  you will need Island Sno:</p>
+</form>
+
+<!-- <button id="sub1">Submit</button> -->
+
+    <div class= "indicate">
+        <p> Please indicate the upcoming time  you will need Island Sno:</p>
+    </div>
         <input type="radio" name="time" value="weeks" checked> upcoming weeks<br>
         <input type="radio" name="time" value="months" checked> upcoming months<br>
         <input type="radio" name="time" value="days" checked> upcoming days
-    </form>
-    
-    <p>Please indicate the area where you live.</p>
+ </form>
+    <div class="area">
+         <p>Please indicate the area where you live.</p>
+    </div>  
     <select>
         <option value="select">Select</option>
         <option value="north augusta">North Augusta</option>
@@ -40,16 +46,16 @@
         <option value="down town">Down Town.</option>
         <option value="so. augusta">So Augusta</option>
     </select>
-    <button type="submit" form="area" value="Submit">Submit</button> 
-    
+
+<button type="submit" form="area" value="Submit">Submit</button> 
+    <!-- <button id="sub2">Submit</button> -->
+
 <h2> Contact Island Sno:</h2>
-
-<!-- contact box with photo of truck maybe.(required) -->
-
-
-    <p>Contact us to add Island Sno treats to your next party! We are available for 
+    
+    <div class ="contact">  
+        <p>Contact us to add Island Sno treats to your next party! We are available for 
         all events Big or Small! </p>
-
+    </div>
 </body>
-<script src="form.js"></script>
+    <script src="form.js"></script>
 </html>
