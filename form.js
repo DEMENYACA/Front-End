@@ -1,15 +1,21 @@
 
-document.getElementById("sub1").addEventListener("click", displayThankYou!);
+document.getElementById("sub1").addEventListener("click",displayThankYou);
 
 function displayThankYou(){
-  alert("Thank You!")
-
-   
-  document.getElementById("sub2").innerHTML ="ThankYou!";
+  document.getElementById("name").innerHTML = ThankYou();
 } 
 
 
 
-// Click submit get message thank you!
-// complete contact info click submit takes you to a "thank you" page
+document.getElementById("sub2").addEventListener("click",displayGreatAge)
 
+function displayGreatAge(){
+  document.getElementById("age").innerHTML = GreatAge();
+
+}
+document.getElementById("sub3").addEventListener("click",displayGreatHobby)
+
+function displayGreatHobby(){
+  document.getElementById("hobby").innerHTML = GreatHobby();
+
+}
