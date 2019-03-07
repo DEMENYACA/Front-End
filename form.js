@@ -1,15 +1,24 @@
+var first_name=document.getElementById("first_name");
+var last_name=document.getElementById("last_name");
+var e_mail=document.getElementById("e_mail");
 
-document.getElementById("sub1").addEventListener("click", displayThankYou!);
+
+
+document.getElementById("sub1").addEventListener("click",displayThankYou);
 
 function displayThankYou(){
-  alert("Thank You!")
-
-   
-  document.getElementById("sub2").innerHTML ="ThankYou!";
+  document.getElementById("name").innerHTML = "Thanks!" +" " + first_name.value + " " + last_name.value + " " + e_mail.value;
 } 
 
+document.getElementById("sub2").addEventListener("click",displayGreatAge)
 
+function displayGreatAge(){
+  document.getElementById("age").innerHTML = "Great Age";
 
-// Click submit get message thank you!
-// complete contact info click submit takes you to a "thank you" page
+}
+document.getElementById("sub3").addEventListener("click",displayGreatHobby)
 
+function displayGreatHobby(){
+  document.getElementById("hobby").innerHTML = "Great Hobby!";
+
+}
