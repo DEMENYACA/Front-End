@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Italiana" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <title>Event Report</title>
+</head>
+<body>
+    
+    <main> 
+        </main>
+        <h1 id="header">Patron Registration</h1>
+        <h1 class="header"></h1> 
+   
+   <form onclick="sendForm()" action="" method="POST">
+    First Name: <input type="text" method="POST" name="firstName" id="firstName" action="datapage.php">
+    Last Name: <input type="text" method="POST" name="lastName" id="lastName" action="datapage.php">
+    <input type="hidden" name="eventName" id="eventName" value="Name of event">
+    <input type="submit" name="button" value="SUBMIT">
+    </form>
+   
+   
+   
+       <script>
+        
+           
+       function sendForm() {
+         let webEvent = window.location.href; 
+         webEvent = webEvent.split("="); 
+         webEvent = webEvent[1];
+         let firstName = document.getElementById("firstName").value;
+         let lastName = document.getElementById("lastName").value;
+         let eventName = webEvent;
+         let formData = new FormData();
+         formData.append('firstName', firstName);
+         formData.append('lastName', lastName);
+         formData.append('eventName', eventName);
+         
+         let xhttp = new XMLHttpRequest();
+         xhttp.open('POST', 'dataPage.php');
+         xhttp.send(formData);
+       }
+     </script> 
+        <h1>Event Record</h1>
+         
+        <!-- <h1>Event Record<br></h1> -->
+        <h2>List of Attendees:</h2> 
+        <table class="form">
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Date / Time</th>
+                </tr>
+        </table>
+        <table class="formContents" id="table">        
+                <tr>
+                        <th>Demi</th>
+                        <th>Morton</th>
+                        <th>19/03/21</th>
+                      </tr>
+
+               </table>      
+    <script>
+(function() {
+    let xhttp;
+    let url = 'dataPage.php';
+    xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = receiveData;
+        xhttp.open('GET', url);
+        xhttp.send();
+    function receiveData() {
+        console.log(xhttp);
+        if (xhttp.readyState === XMLHttpRequest.DONE) {
+            if (xhttp.status === 200) {
+                var dataToString = xhttp.responseText;
+                let table = document.getElementById("table");
+            } 
+        } 
+    }
+    
+})();
+    
+        </script>
+  
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+      /* input[type=SUBMIT] { */
+         /* text-align: center; */
+         /* font-size: 30px; */
+         /* color: azure; */
+         /* background-color: black; */
+         /* border: black; */
+         /* border-radius: 8px; */
+      /* } */
+     /* .slap { */
+         /* font-size: 40px; */
+         /* font-style: serif; */
+         /* font-weight: solid; */
+         /* text-shadow: 2px 2px 8px blue; */
+      /* } */
+
+      /* form { */
+         /* text-align: center; */
+         /* font-size: 40px; */
+         /* font-style: serif; */
+         /* font-weight: solid; */
+         /* text-shadow: 2px 2px 8px blue; */
+      /* } */
+      /* body { */
+         /* background-color: azure; */
+      /* } */
+   </style>
+</head>
+
+<body>
+    <h1>The Augusta Clubhou.se Event Page </h1>
+    <form>Select your event:
+        <select name="Events" id="Events">
+            <option value="Web-Development">Web Development</option>
+            <option value="Project-Manager">Project Manager</option>
+        </select>
+        <input type="button" id="patronRegistration" onclick="toPatron()" value="Patron Registration"><br>
+        <input type="button" id="eventReport" value="Event Report" onclick="toEvent()" >
+    </form>
+
+    <script>
+        function toPatron() {
+            let event = document.getElementById("Events").value; 
+            window.location.href = 'patronRegistration.html?Events='+event;
+            // window.open('patronRegistration.html?Events='+event);
+        }
+        function toEvent() {
+            let event = document.getElementById("Events").value; 
+            window.location.href = 'eventReport.html?Events='+event;
+            // window.open('patronRegistration.html?Events='+event);
+        }
+        
+        
+    </script>
+     <h2>
+        The Clubhou.se would like to thank you for attending the event. <br>
+        We hope you had fun, and look forward to seeing you at the next one.
+        <br>
+        <br>
+        We truly appreciate your support. 
+        <br>
+        <br>
+        Thank you!
+        <br>
+        <br>
+        The Clubhou.se
+        <h2>
+          
+        <image src="https://lh3.googleusercontent.com/89I3jTCnciv_moEjmdORP3rFPBuqlOrImRUj1U6lU4PAWFVY8-LXqlrvoJTlqZQH-on3=w720-h310"></image>
+        <br>
+        <br>
+        <image src="http://hackaugusta.org/i/HackAugusta_logo.png"></image>
+        <br>
+</body>
+
+</html>
